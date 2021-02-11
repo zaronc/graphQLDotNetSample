@@ -10,7 +10,6 @@ namespace Domain.Repository
     {
         List<Product> GetProductsBySupplierId(int supplierId);
         Task<Product> Add(Product product);
-        Task<List<Product>> GetAll_v1();
-        Task<List<Product>> GetAll_v2();
+        Task<List<Product>> GetAll();
     }
 }

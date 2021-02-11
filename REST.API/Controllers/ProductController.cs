@@ -25,7 +25,7 @@ namespace REST.API.Controllers
         [HttpGet]
         public async Task<List<Product>> Get()
         {
-            var products = await _productRepository.GetAll_v2();
+            var products = await _productRepository.GetAll();
             return products;
         }
     }

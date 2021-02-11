@@ -24,11 +24,7 @@ namespace Domain.Repository
             return addedProduct.Entity;
         }
 
-        public async Task<List<Product>> GetAll_v1()
-        {
-            return await _dbContext.Products.ToListAsync();
-        }
-        public async Task<List<Product>> GetAll_v2()
+        public async Task<List<Product>> GetAll()
         {
             return await _dbContext.Products.Include(i=>i.Supplier).ToListAsync();
         }

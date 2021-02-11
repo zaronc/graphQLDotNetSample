@@ -13,12 +13,8 @@ namespace GraphQLDotNet.API.GraphQL
         {
             #region product
             Field<ListGraphType<ProductType>>(
-                "products_v1",
-                resolve: context => productRepository.GetAll_v1()
-            );
-            Field<ListGraphType<ProductType>>(
-                "products_v2",
-                resolve: context => productRepository.GetAll_v2()
+                "products",
+                resolve: context => productRepository.GetAll()
             );
             Field<ListGraphType<ProductType>>(
                 "productsBySupplier",
